@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lato, Poppins } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/providers/theme.provider";
+import { MainProvider } from "@/providers/main.provider";
 import type { ReactNode } from "react";
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+
+const poppins = Poppins({
 	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-poppins",
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const lato = Lato({
 	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-lato",
+	weight: ["100", "300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -26,18 +30,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					{children}
-					<Toaster />
-				</ThemeProvider>
+			<body className={`${lato.variable} ${poppins.variable} antialiased`}>
+				<MainProvider>{children}</MainProvider>
 			</body>
 		</html>
 	);
