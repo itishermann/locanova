@@ -1,4 +1,4 @@
-import { appRouter } from "@/trpc/routers/_app";
+import { appRouter } from "@/trpc/router";
 import { renderTrpcPanel } from "@metamorph/trpc-panel";
 import { NextResponse } from "next/server";
 
