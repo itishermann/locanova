@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LocaNova - Plateforme de gestion locative open source
 
-## Getting Started
+## Description
+Bienvenue sur **LocaNova**, un projet open source visant à créer une plateforme moderne, intuitive et conforme aux réglementations françaises pour la gestion locative. Que vous soyez propriétaire-bailleur ou agence immobilière, notre objectif est de simplifier la gestion des biens immobiliers tout en garantissant une expérience fluide et des outils puissants.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 État actuel
+Le développement de LocaNova a débuté !
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pour le moment, **aucune version de test n'est encore disponible**, mais nous sommes activement en train de poser les bases du projet.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Nous souhaitons créer un outil robuste, évolutif et adapté aux besoins réels des utilisateurs, et votre aide peut faire la différence.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💡 Contribuer
+Bien que le projet soit encore à ses débuts, nous sommes ouverts aux **idées et suggestions**. Vous pouvez contribuer en :
 
-To learn more about Next.js, take a look at the following resources:
+- Proposant des fonctionnalités ou améliorations via les [Issues](https://github.com/itishermann/locanova/issues).
+- Discutant avec la communauté dans [la section discussions](https://github.com/itishermann/locanova/discussions).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+N'hésitez pas à partager vos besoins ou vos retours dès maintenant pour influencer la direction du projet !
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📚 Objectifs principaux
+- Simplifier la gestion locative (annonces, loyers, documents, etc.).
+- Respecter les obligations légales françaises (loi Alur, loi Élan, RGPD, etc.).
+- Offrir une interface claire et un outil accessible via le web et une application mobile.
+- Créer une solution open source collaborative et évolutive.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Technologies prévues
+- **Frontend Web** : [Next.js](https://nextjs.org/) avec SSR et SSG.
+- **Backend** : [Prisma](https://www.prisma.io/) + [PostgreSQL](https://www.postgresql.org/) via [tRPC](https://trpc.io/).
+- **Mobile** : [Expo (React Native)](https://expo.dev/).
+- **CI/CD** : GitHub Actions, Docker (optionnel).
+
+---
+
+## 🔗 Liens utiles
+- **Site officiel (à venir)** : [LocaNova.org](https://locanova.org)
+- **Dépôt GitHub** : [https://github.com/itishermann/locanova](https://github.com/itishermann/locanova)
+- **Documentation (en cours)** : [Wiki](https://github.com/itishermann/locanova/wiki)
+
+---
+
+## 📝 Licence
+LocaNova est un projet open source sous licence [MIT](LICENSE). Vous êtes libre d'utiliser, de modifier et de partager ce projet tout en respectant les termes de la licence.
+
+---
+
+Merci pour votre intérêt et votre soutien à LocaNova ! 🌟
