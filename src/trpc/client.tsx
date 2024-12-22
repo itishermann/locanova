@@ -7,7 +7,7 @@ import { createTRPCReact } from "@trpc/react-query";
 import { useState } from "react";
 import superjson from "superjson";
 import { makeQueryClient } from "./query-client";
-import type { AppRouter } from "./routers/_app";
+import type { AppRouter } from "./router";
 
 export const trpc = createTRPCReact<AppRouter>({
 	abortOnUnmount: true,
