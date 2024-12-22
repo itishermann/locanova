@@ -1,7 +1,7 @@
+import type { TRPCPanelMeta } from "@metamorph/trpc-panel";
 import { initTRPC } from "@trpc/server";
 import { cache } from "react";
 import superjson from "superjson";
-import type { TRPCPanelMeta } from "trpc-panel";
 
 export const createTRPCContext = cache(async () => {
 	/**
@@ -22,5 +22,5 @@ const t = initTRPC.meta<TRPCPanelMeta>().create({
 // Base router and procedure helpers
 export const createTRPCRouter = t.router;
 export const createCallerFactory = t.createCallerFactory;
-export const baseProcedure = t.procedure;
+export const publicProcedure = t.procedure;
 export const mergeRouters = t.mergeRouters;
