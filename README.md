@@ -48,7 +48,7 @@ N'hésitez pas à partager vos besoins ou vos retours dès maintenant pour influ
 ---
 
 ## 📝 Licence
-LocaNova est un projet open source sous licence [MIT](LICENSE). Vous êtes libre d'utiliser, de modifier et de partager ce projet tout en respectant les termes de la licence.
+LocaNova est un projet open source sous licence [GPL-3.0](LICENSE). Vous êtes libre d'utiliser, de modifier et de partager ce projet tout en respectant les termes de la licence.
 
 ---
 
