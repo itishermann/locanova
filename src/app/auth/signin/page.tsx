@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { providerMap, signIn } from "@/lib/shared/infrastructure/auth";
+import { auth, providerMap, signIn } from "@/lib/shared/infrastructure/auth";
 import { AuthError } from "next-auth";
 import { redirect } from "next/navigation";
 
@@ -16,6 +16,12 @@ export default async function SigninPage({
 }: {
 	searchParams: Promise<{ callbackUrl: string | undefined }> | undefined;
 }) {
+	// Redirect to signout page if user is already authenticated
+	const session = await auth();
+	if (session) {
+		return redirect("/auth/signout");
+	}
+
 	const searchParams = await sp;
 	const handleNodemailerSignin = async (formData: FormData) => {
 		"use server";

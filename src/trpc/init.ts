@@ -21,9 +21,16 @@ export const publicProcedure = t.procedure;
 export const mergeRouters = t.mergeRouters;
 export const protectedProcedure = t.procedure.use(async (opts) => {
 	const user = opts.ctx.session?.user;
-	if (!user?.id) {
+	if (!user || !user.id) {
 		throw new TRPCError({ code: "UNAUTHORIZED" });
 	}
 	await auth(); // <-- keep the session alive, this will update the session expiry every time its called.
-	return opts.next({ ctx: { user } });
+	return opts.next({
+		ctx: {
+			user: {
+				...user,
+				id: user.id,
+			},
+		},
+	});
 });

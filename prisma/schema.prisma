@@ -14,16 +14,19 @@ datasource db {
 }
 
 model User {
-  id                String                 @id @default(cuid())
-  email             String                 @unique
-  emailVerified     DateTime?
-  image             String?
-  name              String?
-  accounts          Account[]
-  sessions          Session[]
+  id            String          @id @default(cuid())
+  email         String          @unique
+  emailVerified DateTime?
+  image         String?
+  name          String?
+  accounts      Account[]
+  sessions      Session[]
   // Optional for WebAuthn support
-  Authenticator     Authenticator[]
+  Authenticator Authenticator[]
+
+  // custom fields
   legalInformations UserLegalInformations?
+  isOnboarded       Boolean                @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -88,10 +91,10 @@ model UserLegalInformations {
   userId     String
   firstName  String
   lastName   String
-  birthDate  DateTime
-  birthPlace String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  birthDate  DateTime?
+  birthPlace String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

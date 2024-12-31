@@ -40,7 +40,7 @@ export default async function SignoutPage({
 			<CardContent>
 				<div className="grid gap-6">
 					<form className="grid gap-6" action={handleSignout}>
-						<Button type="submit" className="w-full">
+						<Button type="submit" className="w-full" variant="destructive">
 							Sign out
 						</Button>
 					</form>

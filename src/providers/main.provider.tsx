@@ -12,7 +12,7 @@ export function MainProvider({ children }: PropsWithChildren) {
 			disableTransitionOnChange
 		>
 			<ReactQueryProvider>{children}</ReactQueryProvider>
-			<Toaster />
+			<Toaster closeButton richColors />
 		</ThemeProvider>
 	);
 }

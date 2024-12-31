@@ -21,7 +21,7 @@ export default function AuthLayout({
 					<div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
 						By continuing, you agree to our{" "}
 						<a href="/legal/terms-of-service">Terms of Service</a> and{" "}
-						<a href="legal/privacy-policy">Privacy Policy</a>.
+						<a href="/legal/privacy-policy">Privacy Policy</a>.
 					</div>
 				</div>
 			</div>
